@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="it.unibo.nestedenum.TestMonthSorter" tests="2" skipped="0" failures="2" errors="0" timestamp="2022-11-07T10:47:33" hostname="lab22-05-11" time="0.003">
+<testsuite name="it.unibo.nestedenum.TestMonthSorter" tests="2" skipped="0" failures="2" errors="0" timestamp="2022-11-07T11:10:56" hostname="lab22-05-11" time="0.002">
   <properties/>
-  <testcase name="testAmbiguousAndIllegalName()" classname="it.unibo.nestedenum.TestMonthSorter" time="0.0">
+  <testcase name="testAmbiguousAndIllegalName()" classname="it.unibo.nestedenum.TestMonthSorter" time="0.001">
     <failure message="java.lang.ExceptionInInitializerError" type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
