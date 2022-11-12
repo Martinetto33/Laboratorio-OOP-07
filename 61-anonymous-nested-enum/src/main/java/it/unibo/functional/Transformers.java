@@ -36,6 +36,18 @@ public final class Transformers {
         final var result = new ArrayList<O>();
         for (final I input : Objects.requireNonNull(base, "The base iterable cannot be null")) {
             result.addAll(transformer.call(input));
+            /*NOTE PER ALIN: transformer è un argomento di tipo Function; ma Function è un'interfaccia
+             * generica il cui unico metodo è call() [e parliamone, quella cosa stranissima che è una
+             * funzione statica identity() dentro un'interfaccia, ma vabbé].
+             *  
+             * Il metodo call() tuttavia
+             * va implementato ogni volta che istanzio una classe anonima che implementa l'interfaccia
+             * Function. 
+             * 
+             * Questo metodo flattenTransform prende in input un oggetto iterabile, ossia
+             * un contenitore di oggetti di tipo generico I, e li aggiunge tutti ad una variabile result
+             * di tipo ArrayList dopo averci applicato la call della funzione passata come secondo argomento.
+             */
         }
         return result;
     }
@@ -55,6 +67,11 @@ public final class Transformers {
      * @param <O> output elements type
      */
     public static <I, O> List<O> transform(final Iterable<I> base, final Function<I, O> transformer) {
+        /*Noi supponiamo che l'argomento {transformer} sia già una funzione costruita da chi ha invocato
+         * questo metodo transform. Noi passiamo una nuova Function
+         * (che usa tale funzione esterna {transformer}) a flatten Transform, che la applica
+         * ad ogni elemento di {base}.
+         */
 
         return flattenTransform(base, new Function<I,List<? extends O>>() {
             @Override

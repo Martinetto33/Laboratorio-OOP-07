@@ -18,4 +18,8 @@ public final class MonthSorterNested implements MonthSorter {
     public Comparator<String> sortByOrder() {
         return null;
     }
+
+    public static enum Month {
+        JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER;
+    }
 }
