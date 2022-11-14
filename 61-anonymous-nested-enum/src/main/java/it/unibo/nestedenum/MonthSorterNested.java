@@ -9,16 +9,6 @@ import java.util.Objects;
  */
 public final class MonthSorterNested implements MonthSorter {
 
-    @Override
-    public Comparator<String> sortByDays() {
-        return null;
-    }
-
-    @Override
-    public Comparator<String> sortByOrder() {
-        return null;
-    }
-
     public static enum Month {
         JANUARY("January", 31, 1),
         FEBRUARY("February", 28, 2), 
@@ -53,6 +43,34 @@ public final class MonthSorterNested implements MonthSorter {
 
         public int getOrder() {
             return this.order;
-        }        
+        } 
+        
+        public Month fromString(String monthName) throws AmbiguousMonthNameException, NoSuchMonthException {
+            Month result = null;
+            for (Month elem : Month.values()) {
+                if (elem.getActualName().toLowerCase().matches(monthName.toLowerCase())) {
+                    if (result != null) {
+                        throw new AmbiguousMonthNameException("This month name: " + monthName + "is ambiguous!", monthName);
+                    }
+                    result = elem;
+                }
+            }
+            if (result == null) {
+                throw new NoSuchMonthException("This month: " + monthName + "doesn't exist!", monthName);
+            }
+            return result;
+        }       
+    }
+
+
+
+    @Override
+    public Comparator<String> sortByDays() {
+        return null;
+    }
+
+    @Override
+    public Comparator<String> sortByOrder() {
+        return null;
     }
 }
