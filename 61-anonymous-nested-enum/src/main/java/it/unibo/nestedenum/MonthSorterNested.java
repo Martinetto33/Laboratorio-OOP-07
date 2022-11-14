@@ -44,7 +44,7 @@ public final class MonthSorterNested implements MonthSorter {
         public int getOrder() {
             return this.order;
         } 
-        
+
         public Month fromString(String monthName) throws AmbiguousMonthNameException, NoSuchMonthException {
             Month result = null;
             for (Month elem : Month.values()) {
@@ -62,11 +62,34 @@ public final class MonthSorterNested implements MonthSorter {
         }       
     }
 
+    static class SortByMonthOrder implements Comparator<String> {
 
+        @Override
+        public int compare(String arg0, String arg1) {
+            Month firstMonth = Month.JANUARY;
+            Month secondMonth = Month.JANUARY;
+            try {
+                firstMonth = firstMonth.fromString(arg0);
+            } catch (AmbiguousMonthNameException e) {
+                e.printStackTrace();
+            } catch (NoSuchMonthException e) {
+                e.printStackTrace();
+            }
+            try {
+                secondMonth = secondMonth.fromString(arg1);
+            } catch (AmbiguousMonthNameException e) {
+                e.printStackTrace();
+            } catch (NoSuchMonthException e) {
+                e.printStackTrace();
+            }
+            return firstMonth.order - secondMonth.order;
+        }
+
+    }
 
     @Override
     public Comparator<String> sortByDays() {
-        return null;
+        return new SortByMonthOrder();
     }
 
     @Override

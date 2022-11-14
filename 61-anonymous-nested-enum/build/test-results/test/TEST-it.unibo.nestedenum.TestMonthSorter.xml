@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="it.unibo.nestedenum.TestMonthSorter" tests="2" skipped="0" failures="2" errors="0" timestamp="2022-11-14T10:33:10" hostname="lab22-05-11" time="0.179">
+<testsuite name="it.unibo.nestedenum.TestMonthSorter" tests="2" skipped="0" failures="2" errors="0" timestamp="2022-11-14T11:58:35" hostname="lab22-05-11" time="0.222">
   <properties/>
-  <testcase name="testAmbiguousAndIllegalName()" classname="it.unibo.nestedenum.TestMonthSorter" time="0.094">
+  <testcase name="testAmbiguousAndIllegalName()" classname="it.unibo.nestedenum.TestMonthSorter" time="0.142">
     <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
 	at java.base/java.util.Objects.requireNonNull(Objects.java:221)
-	at java.base/java.util.ImmutableCollections$List12.&lt;init&gt;(ImmutableCollections.java:377)
+	at java.base/java.util.ImmutableCollections$List12.&lt;init&gt;(ImmutableCollections.java:378)
 	at java.base/java.util.List.of(List.java:824)
 	at it.unibo.nestedenum.TestMonthSorter.testAmbiguousAndIllegalName(TestMonthSorter.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -94,7 +94,7 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testSorting()" classname="it.unibo.nestedenum.TestMonthSorter" time="0.082">
+  <testcase name="testSorting()" classname="it.unibo.nestedenum.TestMonthSorter" time="0.077">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;[january, february, march, april, may, june, july, august, september, october, november, december]&gt; but was: &lt;[april, august, december, february, january, july, june, march, may, november, october, september]&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;[january, february, march, april, may, june, july, august, september, october, november, december]&gt; but was: &lt;[april, august, december, february, january, july, june, march, may, november, october, september]&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
