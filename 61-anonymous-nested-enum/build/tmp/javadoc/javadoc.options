@@ -1,0 +1,12 @@
+-classpath 'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\61-anonymous-nested-enum\\build\\classes\\java\\main;C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\61-anonymous-nested-enum\\build\\resources\\main'
+-d 'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\61-anonymous-nested-enum\\build\\docs\\javadoc'
+-doctitle '61-anonymous-nested-enum API'
+-notimestamp 
+-quiet 
+-windowtitle '61-anonymous-nested-enum API'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\61-anonymous-nested-enum\\src\\main\\java\\it\\unibo\\functional\\api\\Function.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\61-anonymous-nested-enum\\src\\main\\java\\it\\unibo\\functional\\Transformers.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\61-anonymous-nested-enum\\src\\main\\java\\it\\unibo\\nestedenum\\AmbiguousMonthNameException.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\61-anonymous-nested-enum\\src\\main\\java\\it\\unibo\\nestedenum\\MonthSorter.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\61-anonymous-nested-enum\\src\\main\\java\\it\\unibo\\nestedenum\\MonthSorterNested.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\61-anonymous-nested-enum\\src\\main\\java\\it\\unibo\\nestedenum\\NoSuchMonthException.java'
