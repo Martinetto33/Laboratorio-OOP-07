@@ -1,6 +1,6 @@
 package it.unibo.nestedenum;
 
-public class AmbiguousMonthNameException extends Exception {
+public class AmbiguousMonthNameException extends IllegalArgumentException {
     
     private final String argument;
 

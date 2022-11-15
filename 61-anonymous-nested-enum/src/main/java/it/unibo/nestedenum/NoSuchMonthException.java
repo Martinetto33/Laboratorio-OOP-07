@@ -1,6 +1,6 @@
 package it.unibo.nestedenum;
 
-public class NoSuchMonthException extends Exception {
+public class NoSuchMonthException extends IllegalArgumentException {
     private final String argument;
 
     public NoSuchMonthException(final String s, final String arg) {

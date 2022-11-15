@@ -23,6 +23,8 @@ public final class MonthSorterNested implements MonthSorter {
         NOVEMBER("November", 30, 11), 
         DECEMBER("December", 31, 12);
         
+        private static final int NOT_FOUND = -1;
+
         private final String actualName;
         private final int numberOfDays;
         private final int order;
@@ -48,7 +50,7 @@ public final class MonthSorterNested implements MonthSorter {
         public Month fromString(String monthName) throws AmbiguousMonthNameException, NoSuchMonthException {
             Month result = null;
             for (Month elem : Month.values()) {
-                if (elem.getActualName().toLowerCase().matches(monthName.toLowerCase())) {
+                if (elem.getActualName().toLowerCase().indexOf(monthName.toLowerCase()) != NOT_FOUND) {
                     if (result != null) {
                         throw new AmbiguousMonthNameException("This month name: " + monthName + "is ambiguous!", monthName);
                     }
@@ -59,7 +61,12 @@ public final class MonthSorterNested implements MonthSorter {
                 throw new NoSuchMonthException("This month: " + monthName + "doesn't exist!", monthName);
             }
             return result;
-        }       
+        } 
+        
+        public Month getMonthFromArgument (Month month, String arg) {
+            month = month.fromString(arg);
+            return month;
+        }
     }
 
     static class SortByMonthOrder implements Comparator<String> {
@@ -68,32 +75,32 @@ public final class MonthSorterNested implements MonthSorter {
         public int compare(String arg0, String arg1) {
             Month firstMonth = Month.JANUARY;
             Month secondMonth = Month.JANUARY;
-            try {
-                firstMonth = firstMonth.fromString(arg0);
-            } catch (AmbiguousMonthNameException e) {
-                e.printStackTrace();
-            } catch (NoSuchMonthException e) {
-                e.printStackTrace();
-            }
-            try {
-                secondMonth = secondMonth.fromString(arg1);
-            } catch (AmbiguousMonthNameException e) {
-                e.printStackTrace();
-            } catch (NoSuchMonthException e) {
-                e.printStackTrace();
-            }
+            firstMonth = firstMonth.getMonthFromArgument(firstMonth, arg0);
+            secondMonth = secondMonth.getMonthFromArgument(secondMonth, arg1);
             return firstMonth.order - secondMonth.order;
         }
+    }
 
+    
+    static class SortByDaysOrder implements Comparator<String> {
+
+        @Override
+        public int compare(String arg0, String arg1) {
+            Month firstMonth = Month.JANUARY;
+            Month secondMonth = Month.JANUARY;
+            firstMonth = firstMonth.getMonthFromArgument(firstMonth, arg0);
+            secondMonth = secondMonth.getMonthFromArgument(secondMonth, arg1);
+            return firstMonth.numberOfDays - secondMonth.numberOfDays;
+        }
     }
 
     @Override
     public Comparator<String> sortByDays() {
-        return new SortByMonthOrder();
+        return new SortByDaysOrder();
     }
 
     @Override
     public Comparator<String> sortByOrder() {
-        return null;
+        return new SortByMonthOrder();
     }
 }
