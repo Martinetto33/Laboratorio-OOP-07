@@ -1,0 +1,16 @@
+-classpath 'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\build\\classes\\java\\main;C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\build\\resources\\main'
+-d 'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\build\\docs\\javadoc'
+-doctitle '63-mvc-gui-reflection API'
+-notimestamp 
+-quiet 
+-windowtitle '63-mvc-gui-reflection API'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\src\\main\\java\\it\\unibo\\mvc\\api\\DrawNumber.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\src\\main\\java\\it\\unibo\\mvc\\api\\DrawNumberController.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\src\\main\\java\\it\\unibo\\mvc\\api\\DrawNumberView.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\src\\main\\java\\it\\unibo\\mvc\\api\\DrawResult.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\src\\main\\java\\it\\unibo\\mvc\\controller\\DrawNumberControllerImpl.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\src\\main\\java\\it\\unibo\\mvc\\LaunchApp.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\src\\main\\java\\it\\unibo\\mvc\\model\\Configuration.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\src\\main\\java\\it\\unibo\\mvc\\model\\DrawNumberImpl.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\src\\main\\java\\it\\unibo\\mvc\\view\\DrawNumberSwingView.java'
+'C:\\Users\\marty\\Desktop\\Alma Water Studiorum\\Anno 2\\Programmazione ad oggetti\\oop-lab07\\Laboratorio-OOP-07\\63-mvc-gui-reflection\\src\\main\\java\\it\\unibo\\mvc\\view\\StdoutDrawNumberView.java'

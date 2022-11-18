@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"it.unibo.mvc"},{"l":"it.unibo.mvc.api"},{"l":"it.unibo.mvc.controller"},{"l":"it.unibo.mvc.model"},{"l":"it.unibo.mvc.view"}];updateSearchResults();
