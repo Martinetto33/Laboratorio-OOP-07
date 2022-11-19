@@ -1,13 +1,14 @@
 package it.unibo.mvc;
 
 import it.unibo.mvc.api.DrawNumberController;
+import it.unibo.mvc.api.DrawNumberView;
 import it.unibo.mvc.controller.DrawNumberControllerImpl;
 import it.unibo.mvc.model.DrawNumberImpl;
 import it.unibo.mvc.view.DrawNumberSwingView;
 import it.unibo.mvc.view.StdoutDrawNumberView;
 import java.lang.Class;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * Application entry-point.
@@ -27,36 +28,25 @@ public final class LaunchApp {
      * @throws IllegalAccessException in case of reflection issues
      * @throws IllegalArgumentException in case of reflection issues
      */
-    public static void main(final String... args) {
-        // final var model = new DrawNumberImpl();
-        // final DrawNumberController app = new DrawNumberControllerImpl(model);
+    public static void main(final String... args) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        final var model = new DrawNumberImpl();
+        final DrawNumberController app = new DrawNumberControllerImpl(model);
+        /*Le successive tre righe si riferiscono al codice che non usa la reflection. */
         // app.addView(new StdoutDrawNumberView());
         // app.addView(new DrawNumberSwingView());
         // app.addView(new DrawNumberSwingView());
-        /*Reflection Loading */
-        Class <?> model;
-        Class <?> app;
-        Class <?> view1;
-        Class <?> view2;
-        Class <?> view3;
+        final Class<?> view1Class = StdoutDrawNumberView.class;
+        final Class<?> view2Class = DrawNumberSwingView.class;
         try {
-            model = Class.forName("DrawNumberImpl"); //usare Class<?> perché Class è un raw type
-            Constructor<?> modelConstructor = model.getDeclaredConstructor(model.getClass());
-            app = Class.forName("DrawNumberControllerImpl");
-            view1 = Class.forName("StdoutDrawNumberView");
-            view2 = Class.forName("DrawNumberSwingView");
-            view3 = Class.forName("DrawNumberSwingView");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            System.exit(3);
+            Constructor<?> view1Constructor = view1Class.getDeclaredConstructor();
+            Constructor<?> view2Constructor = view2Class.getDeclaredConstructor();
+            app.addView((DrawNumberView) view1Constructor.newInstance());
+            app.addView((DrawNumberView) view2Constructor.newInstance());
+            app.addView((DrawNumberView) view2Constructor.newInstance());
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
-            System.out.println("No \"getDeclaredConstructor\" method was found!");
-            System.exit(4);
         } catch (SecurityException e) {
             e.printStackTrace();
-            System.out.println("Security exception!");
-            System.exit(5);
         }
     }
 }
